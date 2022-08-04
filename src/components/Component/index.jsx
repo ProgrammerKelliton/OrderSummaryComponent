@@ -25,7 +25,9 @@ export default function Component() {
                     <span className="pay__price">$59.99/year</span>
                 </div>
 
-                <button className="info__btnChenge">Change</button>
+                <a href="#" className="info__changePlan">
+                    Change
+                </a>
             </div>
 
             <button className="Component__buy">Proceed to Payment</button>

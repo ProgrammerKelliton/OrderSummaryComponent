@@ -4,6 +4,13 @@
     height: 100vh;
 
     @include flex();
+
+    .App__border {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+    }
 }
 
 .App {
