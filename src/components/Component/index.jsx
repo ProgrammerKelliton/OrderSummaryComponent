@@ -31,7 +31,9 @@ export default function Component() {
             </div>
 
             <button className="Component__buy">Proceed to Payment</button>
-            <button className="Component__btnCancel">Cancel Order</button>
+            <a href="#" className="Component__cancel">
+                Cancel Order
+            </a>
         </div>
     );
 }

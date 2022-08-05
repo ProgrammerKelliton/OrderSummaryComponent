@@ -5,16 +5,12 @@
     z-index: 1;
     @include flex();
     flex-direction: column;
-    // gap: 1.5rem;
+    gap: 1.5rem;
 
     width: max(200px, 80%);
 
     &__illustration {
         width: 100%;
-    }
-    &__title {
-        padding: 10% 0;
-        padding-bottom: 4%;
     }
     &__description {
         padding: 0 10%;
@@ -24,9 +20,14 @@
 
         padding: 5%;
 
-        border-radius: $borderRadius;
         @include flex();
         gap: 5%;
+    }
+    &__buy {
+        padding: 15px 22%;
+    }
+    &__cancel {
+        margin-bottom: 20px;
     }
 }
 
@@ -43,5 +44,20 @@
     }
     &__info {
         background-color: $backgroundInfo;
+        border-radius: $borderRadius;
     }
+    &__buy {
+        background-color: $backgroundInfo;
+
+        border-color: transparent;
+        border-radius: 10px;
+    }
+    &__cancel {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.info__changePlan {
+    text-decoration: none;
 }
