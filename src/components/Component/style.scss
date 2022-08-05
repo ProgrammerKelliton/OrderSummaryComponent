@@ -7,7 +7,7 @@
     flex-direction: column;
     gap: 1.5rem;
 
-    width: max(200px, 80%);
+    width: min(400px, 90%);
 
     &__illustration {
         width: 100%;
@@ -15,49 +15,81 @@
     &__description {
         padding: 0 10%;
     }
-    &__info {
-        width: 70%;
-
-        padding: 5%;
-
-        @include flex();
-        gap: 5%;
-    }
     &__buy {
-        padding: 15px 22%;
+        width: calc($widthInfo + 10%);
+        padding: 13px 0;
     }
     &__cancel {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 }
 
 .Component {
     background-color: white;
 
-    border-radius: 0 0 $borderRadius $borderRadius;
+    box-shadow: rgba(64, 49, 231, 0.2) 0px 19px 38px, rgba(64, 49, 231, 0.1) 0px 15px 12px;
 
+    border-radius: $borderRadius;
+
+    &__title {
+        font-weight: 900;
+        font-size: x-large;
+    }
     &__illustration {
         border-radius: $borderRadius $borderRadius 0 0;
     }
     &__description {
+        font-weight: 500;
         text-align: center;
-    }
-    &__info {
-        background-color: $backgroundInfo;
-        border-radius: $borderRadius;
+        color: gray;
     }
     &__buy {
-        background-color: $backgroundInfo;
+        background-color: #4031e7;
 
         border-color: transparent;
         border-radius: 10px;
+
+        font-weight: 700;
+        color: white;
+        font-size: medium;
+
+        box-shadow: rgba(64, 49, 231, 0.2) 0px 19px 38px, rgba(64, 49, 231, 0.1) 0px 15px 12px;
     }
     &__cancel {
         text-decoration: none;
-        color: black;
+        color: gray;
+        font-weight: 700;
     }
 }
 
-.info__changePlan {
-    text-decoration: none;
+.Component__info {
+    width: $widthInfo;
+
+    padding: 5%;
+
+    @include flex();
+    justify-content: left;
+    gap: 5%;
+
+    .info__changePlan {
+        flex: 1;
+    }
+}
+
+.Component__info {
+    background-color: #f8f9fe;
+    border-radius: $borderRadius;
+
+    .info__pay {
+        .pay__plan {
+            font-weight: 700;
+            font-size: medium;
+        }
+        .pay__price {
+            color: gray;
+        }
+    }
+    .info__changePlan {
+        text-align: right;
+    }
 }
