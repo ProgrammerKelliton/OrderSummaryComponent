@@ -54,6 +54,11 @@
         font-size: medium;
 
         box-shadow: rgba(64, 49, 231, 0.2) 0px 19px 38px, rgba(64, 49, 231, 0.1) 0px 15px 12px;
+
+        &:hover {
+            background-color: rgba(64, 49, 231, 0.7);
+            cursor: pointer;
+        }
     }
     &__cancel {
         text-decoration: none;
@@ -91,5 +96,9 @@
     }
     .info__changePlan {
         text-align: right;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
